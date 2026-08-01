@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Verde Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cvdeep: '#001B2E',
+                        cvcyan: '#00FFFF',
+                        cvneon: '#39FF14',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animações de entrada */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 0.2s; }
+        .delay-200 { animation-delay: 0.4s; }
+        .delay-300 { animation-delay: 0.6s; }
+        
+        /* Gradiente de fundo para mesclar tech e natureza (Mata Atlântica/Mar) */
+        .bg-tech-nature {
+            background: radial-gradient(circle at 10% 20%, rgba(0, 45, 64, 0.8) 0%, rgba(0, 27, 46, 1) 90%);
+        }
+        
+        /* Efeito Glow para o Botão Principal */
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(57, 255, 20, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 45px rgba(57, 255, 20, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-cvdeep text-white font-sans antialiased selection:bg-cvcyan selection:text-cvdeep">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-cvdeep/85 backdrop-blur-md border-b border-cvcyan/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full border-2 border-cvcyan flex items-center justify-center bg-cvdeep shadow-[0_0_12px_rgba(0,255,255,0.4)]">
+                        <span class="text-cvneon font-bold text-sm">CVT</span>
+                    </div>
+                    <span class="font-bold text-xl md:text-2xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cvcyan to-cvneon">Costa Verde Tech</span>
+                </div>
+                <!-- Links Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#eventos" class="hover:text-cvcyan transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Eventos</a>
+                        <a href="#sobre" class="hover:text-cvcyan transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Sobre</a>
+                        <a href="https://instagram.com/costaverdetech_eventos" target="_blank" class="hover:text-cvneon transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Instagram</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button (Apenas visual para o layout estático) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-cvcyan hover:text-white focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="eventos" class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-tech-nature min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <!-- Efeitos de luz no fundo -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cvcyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cvneon/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="text-center z-10 max-w-4xl mx-auto fade-in">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">Workshop Prático de</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cvcyan to-cvneon block mt-2">Inteligência Artificial</span>
+            </h1>
+            <p class="mt-6 text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto font-light">
+                A conexão entre a natureza e o futuro da tecnologia no Sul Fluminense.
+            </p>
+            <a href="https://www.sympla.com.br/evento-online/workshop-pratico-de-ia/3520336" target="_blank" class="inline-flex items-center justify-center gap-3 bg-cvdeep border border-cvcyan text-cvcyan font-bold py-4 px-10 rounded-full text-lg uppercase tracking-wide btn-glow hover:bg-cvcyan/10">
+                Inscreva-se no Sympla
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 px-4 sm:px-6 lg:px-8 bg-cvdeep relative border-t border-cvcyan/10">
+        <div class="max-w-4xl mx-auto text-center fade-in delay-100">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-cvcyan to-white">Sobre o Costa Verde Tech</h2>
+            <div class="p-10 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cvcyan to-cvneon"></div>
+                <p class="text-lg md:text-2xl text-gray-300 leading-relaxed font-light">
+                    O Costa Verde Tech é a principal comunidade de tecnologia e inovação de Angra dos Reis e região. Nossa missão é conectar estudantes, profissionais de TI e empreendedores, criando uma ponte sólida entre a sala de aula e o mercado corporativo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais (Cards) -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-tech-nature relative border-t border-cvcyan/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-cvneon fade-in">Nossos Pilares</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="fade-in delay-100 bg-cvdeep/60 p-8 rounded-2xl border border-cvcyan/20 hover:border-cvcyan transition-all duration-300 hover:-translate-y-2 group shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cvcyan/5 rounded-bl-full -z-10 group-hover:bg-cvcyan/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-cvcyan/20 to-transparent border border-cvcyan/30 flex items-center justify-center text-cvcyan group-hover:text-cvneon group-hover:border-cvneon/50 transition-all">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white group-hover:text-cvcyan transition-colors">Certificação 40h</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Possibilidade exclusiva de upgrade dos certificados iniciais de 3h para 40 horas completas, através do nosso material de extensão focado na prática de mercado.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="fade-in delay-200 bg-cvdeep/60 p-8 rounded-2xl border border-cvcyan/20 hover:border-cvcyan transition-all duration-300 hover:-translate-y-2 group shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cvcyan/5 rounded-bl-full -z-10 group-hover:bg-cvcyan/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-cvcyan/20 to-transparent border border-cvcyan/30 flex items-center justify-center text-cvcyan group-hover:text-cvneon group-hover:border-cvneon/50 transition-all">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white group-hover:text-cvcyan transition-colors">TeachOps</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Nossa metodologia exclusiva de treinamento teórico combinada com instrução prática intensiva para capacitação real e direta de times de tecnologia.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="fade-in delay-300 bg-cvdeep/60 p-8 rounded-2xl border border-cvcyan/20 hover:border-cvcyan transition-all duration-300 hover:-translate-y-2 group shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cvcyan/5 rounded-bl-full -z-10 group-hover:bg-cvcyan/10 transition-colors"></div>
+                    <div class="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-cvcyan/20 to-transparent border border-cvcyan/30 flex items-center justify-center text-cvcyan group-hover:text-cvneon group-hover:border-cvneon/50 transition-all">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white group-hover:text-cvcyan transition-colors">Networking Regional</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Foco em conectar os talentos e empresas de Angra, Paraty e Mangaratiba, fortalecendo a economia e gerando oportunidades únicas na nossa região.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#001220] border-t border-cvcyan/20 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="text-center mb-8">
+                <h4 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cvcyan to-cvneon mb-4">Costa Verde Tech</h4>
+                <p class="text-gray-400 max-w-lg mx-auto text-lg font-light italic">
+                    "Transformando a região em um verdadeiro hub tecnológico e de inovação."
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mb-10 items-center">
+                <a href="https://instagram.com/costaverdetech_eventos" target="_blank" class="flex items-center gap-2 text-gray-300 hover:text-cvneon transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    @costaverdetech_eventos
+                </a>
+                <span class="hidden sm:block text-cvcyan/50">|</span>
+                <a href="mailto:contato@costaverdetech.com.br" class="flex items-center gap-2 text-gray-300 hover:text-cvcyan transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    contato@costaverdetech.com.br
+                </a>
+            </div>
+            <div class="text-gray-600 text-sm font-medium">
+                &copy; 2026 Costa Verde Tech. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para ativar animações de scroll -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
