@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Costa Verde Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cvdeep: '#001B2E',
+                        cvcyan: '#00FFFF',
+                        cvneon: '#39FF14',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animações de entrada */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 0.2s; }
+        .delay-200 { animation-delay: 0.4s; }
+        
+        /* Gradiente de fundo */
+        .bg-tech-nature {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 45, 64, 0.8) 0%, rgba(0, 27, 46, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-cvdeep text-white font-sans antialiased selection:bg-cvcyan selection:text-cvdeep">
+
+    <!-- Navbar Simplificada -->
+    <nav class="fixed w-full z-50 bg-cvdeep/90 backdrop-blur-md border-b border-cvcyan/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4 hover:opacity-80 transition-opacity">
+                    <div class="w-10 h-10 rounded-full border border-cvcyan flex items-center justify-center bg-cvdeep shadow-[0_0_8px_rgba(0,255,255,0.4)]">
+                        <span class="text-cvneon font-bold text-xs">CVT</span>
+                    </div>
+                    <span class="font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cvcyan to-cvneon">Costa Verde Tech</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="hover:text-cvcyan transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Início</a>
+                        <a href="sobre.html" class="text-cvcyan px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Sobre</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-tech-nature relative">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+                Conheça a Nossa História
+            </h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-cvcyan to-cvneon mx-auto rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Seção: Nossa Missão -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-cvdeep relative">
+        <div class="max-w-5xl mx-auto fade-in delay-100">
+            <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-cvcyan/20 shadow-[0_0_30px_rgba(0,255,255,0.05)] relative overflow-hidden group hover:border-cvcyan/40 transition-colors duration-300">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-cvcyan/5 rounded-bl-full -z-10 group-hover:bg-cvcyan/10 transition-colors"></div>
+                <h2 class="text-3xl font-bold mb-6 text-cvcyan flex items-center gap-3">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Nossa Missão
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+                    A Costa Verde Tech tem como pilar fundamental o <strong class="text-white font-semibold">fomento de iniciativas de tecnologia educacional</strong>, conectando o conhecimento acadêmico à realidade do mercado de trabalho. 
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-light mt-4">
+                    Além da nossa forte atuação comunitária e educacional, possuímos um braço estratégico focado na <strong class="text-cvneon font-semibold">prestação de serviços de TI de alto nível</strong>. Nossa prioridade é atender as empresas da região do Sul Fluminense e arredores, impulsionando a transformação digital e fortalecendo o ecossistema tecnológico local com soluções eficientes e inovadoras.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Sobre o Fundador -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#001220] relative border-t border-white/5">
+        <div class="max-w-5xl mx-auto fade-in delay-200">
+            <h2 class="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cvneon to-cvcyan">Sobre o Fundador</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center bg-cvdeep/50 p-8 rounded-3xl border border-white/10 shadow-xl">
+                <!-- Ícone/Avatar Placeholder -->
+                <div class="flex-shrink-0 relative">
+                    <div class="w-48 h-48 rounded-full border-4 border-cvcyan/30 flex items-center justify-center bg-gradient-to-br from-[#001B2E] to-[#002D40] overflow-hidden shadow-[0_0_20px_rgba(0,255,255,0.2)]">
+                        <svg class="w-24 h-24 text-cvcyan/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <div class="absolute bottom-2 right-2 w-10 h-10 bg-cvneon rounded-full flex items-center justify-center border-4 border-[#001220]">
+                        <svg class="w-5 h-5 text-cvdeep" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    </div>
+                </div>
+                
+                <!-- Texto da Biografia -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Fábio Almeida</h3>
+                    <p class="text-cvcyan font-medium mb-6 uppercase tracking-wider text-sm">Especialista de TI & Fundador</p>
+                    
+                    <div class="space-y-4 text-gray-300 font-light leading-relaxed">
+                        <p>
+                            Fábio Almeida é um profissional dedicado da área de tecnologia da informação e telecomunicações, somando <strong>mais de 20 anos de experiência sólida</strong> no mercado corporativo e técnico.
+                        </p>
+                        <p>
+                            Com formação técnica em engenharia, ele construiu uma carreira baseada na resolução de problemas complexos e na implementação de infraestruturas resilientes. Mantendo-se sempre à frente das inovações, Fábio realizou recentemente uma transição de carreira estratégica para a área de <strong>DevOps</strong>.
+                        </p>
+                        <p>
+                            Atuando ativamente como analista no mercado atual, ele une sua profunda bagagem em operações tradicionais de TI com as mais modernas práticas de automação, integração contínua e cultura em nuvem. É essa visão integrada e experiente que fundamenta as entregas e a missão educacional da Costa Verde Tech.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simples -->
+    <footer class="bg-[#000d17] border-t border-cvcyan/10 pt-12 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h4 class="text-xl font-bold text-gray-500 mb-4">Costa Verde Tech</h4>
+            <div class="text-gray-600 text-sm font-medium">
+                &copy; 2026 Costa Verde Tech. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Animações -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            elements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
