@@ -11,13 +11,15 @@
     "subtitulo": "Em 2027",
     "descricao_curta": "O marco zero do nosso ecossistema. Conecte-se com talentos locais e descubra novas oportunidades de negócios na região da Costa Verde.",
     "link": "#",
-    "cor_destaque": "text-[#39FF14]"
+    "cor_destaque": "text-[#39FF14]",
+    "mostrar_botao": false
   },
   {
     "titulo": "Inteligência Artificial Caiçara",
     "subtitulo": "Em Breve",
     "descricao_curta": "Um workshop prático e exclusivo no coração histórico de Paraty. Desembarque no futuro da tecnologia com o pé na tradição.",
     "link": "#",
-    "cor_destaque": "text-[#00FFFF]"
+    "cor_destaque": "text-[#00FFFF]",
+    "mostrar_botao": false
   }
 ]
