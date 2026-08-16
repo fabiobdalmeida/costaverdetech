@@ -283,7 +283,8 @@
         function prev(){ current = (current - 1 + total) % total; update(); resetAuto(); }
         function goTo(i){ current = i % total; update(); resetAuto(); }
 
-        function startAuto(){ intervalId = setInterval(next, 5000); }
+        // Aumentei o intervalo automático para 9 segundos para reduzir a velocidade de rolagem
+        function startAuto(){ intervalId = setInterval(next, 9000); }
         function stopAuto(){ if(intervalId) clearInterval(intervalId); intervalId = null; }
         function resetAuto(){ stopAuto(); startAuto(); }
 
