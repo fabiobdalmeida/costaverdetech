@@ -85,7 +85,7 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#eventos" class="hover:text-cvcyan transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Eventos</a>
                         <a href="#sobre" class="hover:text-cvcyan transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Sobre</a>
-                        <a href="https://instagram.com/costaverdetech" target="_blank" class="hover:text-cvneon transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">In[...]
+                        <a href="https://instagram.com/costaverdetech" target="_blank" rel="noopener noreferrer" class="hover:text-cvneon transition-colors px-3 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">Instagram</a>
                     </div>
                 </div>
                 <!-- Mobile Menu Button (Apenas visual para o layout estático) -->
@@ -279,8 +279,9 @@
         function stopAuto(){ if(intervalId) clearInterval(intervalId); intervalId = null; }
         function resetAuto(){ stopAuto(); startAuto(); }
 
-        nextBtn?.addEventListener('click', next);
-        prevBtn?.addEventListener('click', prev);
+        // PREVENT default navigation in case buttons are inside an <a>
+        nextBtn?.addEventListener('click', (e)=>{ e.preventDefault(); e.stopPropagation(); next(); });
+        prevBtn?.addEventListener('click', (e)=>{ e.preventDefault(); e.stopPropagation(); prev(); });
 
         [track, indicators, nextBtn, prevBtn].forEach(el=>{
           if(!el) return;
