@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Workshop Prático de IA",
+    "subtitulo": "13 de Agosto | 100% Online",
+    "descricao_curta": "Decodifique a IA na prática em 90 minutos. Aprenda a automatizar sua rotina, criar prompts eficientes e multiplicar sua produtividade.",
+    "link": "https://www.sympla.com.br/evento-online/workshop-pratico-de-ia/3520336",
+    "cor_destaque": "text-[#00FFFF]"
+  },
+  {
+    "titulo": "1º Ciclo de Palestras em Angra",
+    "subtitulo": "Em Breve | Faculdade Estácio",
+    "descricao_curta": "O marco zero do nosso ecossistema. Conecte-se com talentos locais e descubra novas oportunidades de negócios na região da Costa Verde.",
+    "link": "#",
+    "cor_destaque": "text-[#39FF14]"
+  },
+  {
+    "titulo": "IA Caiçara",
+    "subtitulo": "Paraty - RJ",
+    "descricao_curta": "Um workshop prático e exclusivo no coração histórico de Paraty. Desembarque no futuro da tecnologia com o pé na tradição.",
+    "link": "#",
+    "cor_destaque": "text-[#00FFFF]"
+  }
+]
