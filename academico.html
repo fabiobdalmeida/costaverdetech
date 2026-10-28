@@ -82,6 +82,15 @@
         const conteudo = document.createElement('div');
         conteudo.append(titulo, descricao);
 
+        const modalidade = document.createElement('p');
+        const modalidadeValida = item.modalidade === 'Presencial' || item.modalidade === 'Remoto';
+        modalidade.className = modalidadeValida
+          ? 'inline-flex items-center gap-2 mt-4 px-3 py-1 rounded-full border border-brandGreen/40 bg-brandGreen/10 text-brandGreen text-sm font-semibold'
+          : 'inline-flex items-center gap-2 mt-4 px-3 py-1 rounded-full border border-yellow-400/40 bg-yellow-400/10 text-yellow-200 text-sm font-semibold';
+        modalidade.textContent = modalidadeValida ? `Modalidade: ${item.modalidade}` : 'Modalidade a definir';
+        modalidade.setAttribute('aria-label', modalidade.textContent);
+        conteudo.append(modalidade);
+
         const rodape = document.createElement('div');
         rodape.className = 'pt-4 border-t border-gray-700/50 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3';
         const beneficio = document.createElement('span');
