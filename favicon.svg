@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="greenBall" cx="34%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#a8ff8b"/>
+      <stop offset=".48" stop-color="#39e65b"/>
+      <stop offset="1" stop-color="#10a83a"/>
+    </radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#087d2c"/>
+  <circle cx="32" cy="31" r="27" fill="url(#greenBall)"/>
+  <ellipse cx="24" cy="16" rx="13" ry="5" transform="rotate(-23 24 16)" fill="url(#shine)" opacity=".7"/>
+</svg>
