@@ -5,6 +5,7 @@
       "titulo": "Banco de Reserva: Atividades Práticas em Desenvolvimento & TI",
       "descricao": "Atividade acadêmica remota de até 4 horas focada em desenvolvimento de software, testes de scripts e suporte técnico. Inclui ajuda de custo e declaração para horas complementares.",
       "modalidade": "Remoto",
+      "duracao_horas": 4,
       "link_form": ""
     },
     {
@@ -12,6 +13,7 @@
       "titulo": "Documentação Técnica, IA e Pacote Office (Geral & Admin)",
       "descricao": "Desafio prático curto (até 4h) para organização de documentos, planilhas e prompts de Inteligência Artificial. Aberto para estudantes de TI, Administração, Jornalismo e áreas afins com ajuda de custo.",
       "modalidade": "Remoto",
+      "duracao_horas": 4,
       "link_form": ""
     },
     {
@@ -19,6 +21,7 @@
       "titulo": "Estruturação de Automações & Agentes de Suporte (SupportOps)",
       "descricao": "Atividade pontual para testes e configuração de fluxos automatizados de atendimento (WhatsApp/Manychat). Ajuda de custo definida por atividade.",
       "modalidade": "Remoto",
+      "duracao_horas": 4,
       "link_form": ""
     },
     {
@@ -26,6 +29,7 @@
       "titulo": "Apoio Operacional ao Ciclo de Palestras & Credenciamento Sympla",
       "descricao": "Atividade acadêmica complementar focada na gestão de inscrições, check-in e suporte ao disparo de certificados digitais do evento.",
       "modalidade": "Presencial",
+      "duracao_horas": 4,
       "link_form": ""
     },
     {
@@ -33,6 +37,7 @@
       "titulo": "Criação de Conteúdo & Micro-copywriting para Mídias Tech",
       "descricao": "Elaboração de resumos educativos e chamadas curtas sobre IA e Open Source para redes sociais. Atividade de 3h a 4h com ajuda de custo.",
       "modalidade": "Remoto",
+      "duracao_horas": 3,
       "link_form": ""
     },
     {
@@ -40,6 +45,7 @@
       "titulo": "Manutenção Front-end & Componentes Tailwind CSS",
       "descricao": "Projeto prático de curta duração para ajustes e otimização de componentes na landing page e portais da comunidade.",
       "modalidade": "Remoto",
+      "duracao_horas": 2,
       "link_form": ""
     },
     {
@@ -47,6 +53,7 @@
       "titulo": "Curadoria & Teste de Ferramentas Open Source (Debian)",
       "descricao": "Validação prática de softwares livres (modo quiosque / LTSP) aplicados a soluções para comércios da região.",
       "modalidade": "Presencial",
+      "duracao_horas": 1,
       "link_form": ""
     }
   ]
