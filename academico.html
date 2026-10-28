@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oportunidades acadêmicas e atividades práticas da comunidade Costa Verde Tech.">
+  <title>Oportunidades Acadêmicas | Costa Verde Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      brandDark: '#001B2E', brandCyan: '#00FFFF', brandGreen: '#39FF14', brandCard: '#002642'
+    } } } };
+  </script>
+  <style>
+    body { background-color: #001B2E; color: #fff; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .glow-cyan { box-shadow: 0 0 15px rgba(0, 255, 255, .12); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="border-b border-brandCyan/20 bg-brandDark/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center gap-4">
+      <a href="index.html" class="text-xl sm:text-2xl font-bold tracking-wider text-brandCyan">COSTA VERDE <span class="text-brandGreen">TECH</span></a>
+      <a href="index.html" class="text-sm text-gray-300 hover:text-brandCyan transition">← Voltar ao Início</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10 flex-grow w-full">
+    <div class="mb-10 text-center">
+      <span class="inline-block bg-brandCyan/10 text-brandCyan text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full border border-brandCyan/30 mb-3">Oportunidades Acadêmicas</span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Atividades Acadêmicas com <span class="text-brandGreen">Ajuda de Custo</span></h1>
+      <p class="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">Projetos práticos curtos (até 4 horas) para estudantes universitários. Ganhe experiência real, ajuda de custo e declaração para horas complementares.</p>
+    </div>
+
+    <div id="container-oportunidades" class="space-y-6" aria-live="polite" aria-busy="true">
+      <div class="text-center py-12 text-gray-400"><p class="animate-pulse">Carregando oportunidades do repositório...</p></div>
+    </div>
+
+    <nav id="paginacao" class="mt-10 flex justify-center items-center gap-3 hidden" aria-label="Paginação das oportunidades">
+      <button id="btn-anterior" type="button" class="px-4 py-2 bg-brandCard border border-brandCyan/30 text-brandCyan rounded hover:bg-brandCyan/20 disabled:opacity-40 disabled:cursor-not-allowed transition text-sm font-semibold">← Anterior</button>
+      <span id="info-pagina" class="text-sm text-gray-300 px-3 py-1 bg-brandDark border border-gray-700 rounded" aria-live="polite"></span>
+      <button id="btn-proxima" type="button" class="px-4 py-2 bg-brandCard border border-brandCyan/30 text-brandCyan rounded hover:bg-brandCyan/20 disabled:opacity-40 disabled:cursor-not-allowed transition text-sm font-semibold">Próxima →</button>
+    </nav>
+  </main>
+
+  <footer class="border-t border-brandCyan/20 bg-brandDark py-6 mt-12 text-center text-xs text-gray-400">
+    <p>Organização Costa Verde Tech • Fomentando o ecossistema de tecnologia no Sul Fluminense</p>
+  </footer>
+
+  <script>
+    (() => {
+      const ITENS_POR_PAGINA = 5;
+      let oportunidades = [];
+      let paginaAtual = 1;
+      const container = document.getElementById('container-oportunidades');
+      const paginacao = document.getElementById('paginacao');
+      const anterior = document.getElementById('btn-anterior');
+      const proxima = document.getElementById('btn-proxima');
+
+      function mensagem(texto, erro = false) {
+        container.replaceChildren();
+        const caixa = document.createElement('div');
+        caixa.className = erro
+          ? 'text-center py-12 border border-red-500/30 bg-red-950/20 rounded-lg text-red-300'
+          : 'text-center py-12 border border-dashed border-gray-700 rounded-lg text-gray-400';
+        const p = document.createElement('p');
+        p.textContent = texto;
+        caixa.append(p);
+        container.append(caixa);
+        container.setAttribute('aria-busy', 'false');
+      }
+
+      function criarCard(item) {
+        const card = document.createElement('article');
+        card.className = 'bg-brandCard border border-brandCyan/20 rounded-lg p-6 hover:border-brandCyan/50 transition glow-cyan flex flex-col justify-between gap-4';
+        const titulo = document.createElement('h2');
+        titulo.className = 'text-xl font-bold text-brandCyan mb-2';
+        titulo.textContent = item.titulo;
+        const descricao = document.createElement('p');
+        descricao.className = 'text-gray-200 text-sm md:text-base leading-relaxed';
+        descricao.textContent = item.descricao;
+        const conteudo = document.createElement('div');
+        conteudo.append(titulo, descricao);
+
+        const rodape = document.createElement('div');
+        rodape.className = 'pt-4 border-t border-gray-700/50 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3';
+        const beneficio = document.createElement('span');
+        beneficio.className = 'text-xs text-brandGreen font-medium';
+        beneficio.textContent = '✓ Ajuda de custo • Horas complementares';
+        rodape.append(beneficio);
+
+        const link = typeof item.link_form === 'string' ? item.link_form.trim() : '';
+        let url;
+        try { url = new URL(link); } catch (_) { url = null; }
+        if (url && url.protocol === 'https:' && (url.hostname === 'forms.gle' || url.hostname === 'docs.google.com')) {
+          const acao = document.createElement('a');
+          acao.href = url.href;
+          acao.target = '_blank';
+          acao.rel = 'noopener noreferrer';
+          acao.className = 'inline-flex items-center justify-center gap-1 text-sm font-bold text-brandDark bg-brandCyan hover:bg-brandGreen px-4 py-2 rounded transition-colors duration-200';
+          acao.textContent = 'Clique aqui';
+          rodape.append(acao);
+        } else {
+          const indisponivel = document.createElement('span');
+          indisponivel.className = 'text-sm text-gray-400';
+          indisponivel.textContent = 'Inscrições em breve';
+          rodape.append(indisponivel);
+        }
+        card.append(conteudo, rodape);
+        return card;
+      }
+
+      function renderizarPagina() {
+        container.replaceChildren();
+        const totalPaginas = Math.ceil(oportunidades.length / ITENS_POR_PAGINA);
+        const inicio = (paginaAtual - 1) * ITENS_POR_PAGINA;
+        oportunidades.slice(inicio, inicio + ITENS_POR_PAGINA).forEach(item => container.append(criarCard(item)));
+        container.setAttribute('aria-busy', 'false');
+
+        paginacao.classList.toggle('hidden', totalPaginas <= 1);
+        document.getElementById('info-pagina').textContent = `Página ${paginaAtual} de ${totalPaginas}`;
+        anterior.disabled = paginaAtual === 1;
+        proxima.disabled = paginaAtual === totalPaginas;
+      }
+
+      function mudarPagina(direcao) {
+        const totalPaginas = Math.ceil(oportunidades.length / ITENS_POR_PAGINA);
+        paginaAtual = Math.max(1, Math.min(totalPaginas, paginaAtual + direcao));
+        renderizarPagina();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      anterior.addEventListener('click', () => mudarPagina(-1));
+      proxima.addEventListener('click', () => mudarPagina(1));
+
+      async function carregarOportunidades() {
+        try {
+          const resposta = await fetch('./oportunidades.json');
+          if (!resposta.ok) throw new Error('Não foi possível carregar oportunidades.json.');
+          const dados = await resposta.json();
+          oportunidades = Array.isArray(dados.oportunidades)
+            ? dados.oportunidades.filter(item => item && typeof item.titulo === 'string' && typeof item.descricao === 'string')
+            : [];
+          if (oportunidades.length === 0) {
+            paginacao.classList.add('hidden');
+            mensagem('Nenhuma oportunidade disponível no momento. Volte em breve.');
+            return;
+          }
+          renderizarPagina();
+        } catch (erro) {
+          console.error('Erro ao carregar oportunidades:', erro);
+          paginacao.classList.add('hidden');
+          mensagem('Erro ao carregar as oportunidades. Verifique se oportunidades.json está presente e tente novamente.', true);
+        }
+      }
+
+      carregarOportunidades();
+    })();
+  </script>
+</body>
+</html>
