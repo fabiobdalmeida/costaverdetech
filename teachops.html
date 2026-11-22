@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça TeachOps, projeto de livro da Costa Verde Tech sobre ensino de tecnologia, prática guiada e repasse operacional.">
+    <title>TeachOps | Costa Verde Tech</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at top left, #074456, #001b2e 60%) fixed;
+            color: #edf8fb;
+            font: 1rem/1.65 Inter, system-ui, sans-serif;
+        }
+        .container { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+        header { border-bottom: 1px solid #245365; }
+        nav { display: flex; align-items: center; min-height: 4.5rem; }
+        .back {
+            display: inline-flex;
+            gap: .55rem;
+            align-items: center;
+            padding: .45rem .8rem;
+            border: 1px solid #35808c;
+            border-radius: .55rem;
+            color: #71ffff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .back:hover { background: #103b4b; }
+        .back:focus-visible { outline: 2px solid #71ffff; outline-offset: 4px; }
+        main { padding-block: clamp(3rem, 8vw, 7rem); }
+        .status { color: #98ff87; font-weight: 700; }
+        h1, h2, p { margin: 0; }
+        h1 { max-width: 14ch; margin-block: .7rem 1.25rem; font-size: clamp(2.5rem, 8vw, 5.25rem); line-height: 1.04; letter-spacing: -.045em; }
+        .intro { max-width: 57ch; font-size: clamp(1rem, 2.5vw, 1.22rem); }
+        .details { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; margin-top: 2.25rem; }
+        .details section { background: #0a2a3c; border: 1px solid #245365; border-radius: 1rem; padding: 1.3rem; }
+        .details > h2 { grid-column: 1 / -1; font-size: 1.35rem; }
+        h3 { margin: 0 0 .5rem; color: #71ffff; font-size: 1.16rem; }
+        p { color: #c8dce4; }
+        footer { border-top: 1px solid #245365; padding-block: 1.25rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" aria-label="Navegação">
+            <a class="back" href="index.html" aria-label="Voltar à página inicial"><span aria-hidden="true">←</span> Voltar</a>
+        </nav>
+    </header>
+    <main class="container">
+        <p class="status">Livro em desenvolvimento</p>
+        <h1>TeachOps</h1>
+        <p class="intro">Um projeto de livro da Costa Verde Tech sobre como ensinar tecnologia, da primeira explicação à execução de uma tarefa e ao repasse do que foi aprendido.</p>
+        <section class="details" aria-labelledby="triade">
+            <h2 id="triade">Tríade de Ancoragem Técnica</h2>
+            <section>
+                <h3>Abstração Lúdica</h3>
+                <p>Apresentar o conceito com analogias, exemplos e exercícios exploratórios para tornar a ideia concreta antes da prática.</p>
+            </section>
+            <section>
+                <h3>Execução Focada</h3>
+                <p>Aplicar o conceito a uma tarefa prática com um objetivo definido e critérios para conferir o resultado.</p>
+            </section>
+            <section>
+                <h3>Repasse Operacional</h3>
+                <p>Registrar o procedimento, as decisões e as verificações para que outra pessoa possa repetir o trabalho e dar continuidade a ele.</p>
+            </section>
+        </section>
+    </main>
+    <footer><p class="container">Costa Verde Tech</p></footer>
+</body>
+</html>
