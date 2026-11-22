@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a iniciativa Totens Debian da Costa Verde Tech e entre em contato para participar do piloto de autoatendimento.">
+    <title>Totens Debian | Costa Verde Tech</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at top left, #074456, #001b2e 60%) fixed;
+            color: #edf8fb;
+            font: 1rem/1.65 Inter, system-ui, sans-serif;
+        }
+        .container { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+        header { border-bottom: 1px solid #245365; }
+        nav { display: flex; align-items: center; min-height: 4.5rem; }
+        .back {
+            display: inline-flex;
+            gap: .55rem;
+            align-items: center;
+            padding: .45rem .8rem;
+            border: 1px solid #35808c;
+            border-radius: .55rem;
+            color: #71ffff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .back:hover { background: #103b4b; }
+        .back:focus-visible { outline: 2px solid #71ffff; outline-offset: 4px; }
+        main { padding-block: clamp(3rem, 8vw, 7rem); }
+        .location { color: #98ff87; font-weight: 700; }
+        h1, h2, p { margin: 0; }
+        h1 { max-width: 14ch; margin-block: .7rem 1.25rem; font-size: clamp(2.5rem, 8vw, 5.25rem); line-height: 1.04; letter-spacing: -.045em; }
+        .intro { max-width: 57ch; font-size: clamp(1rem, 2.5vw, 1.22rem); }
+        .partners { max-width: 44rem; margin-top: 2.25rem; padding: 1.3rem; background: #0a2a3c; border: 1px solid #245365; border-radius: 1rem; }
+        .contact { margin-top: 1rem; }
+        h2 { margin-bottom: .5rem; color: #71ffff; font-size: 1.16rem; }
+        p { color: #c8dce4; }
+        footer { border-top: 1px solid #245365; padding-block: 1.25rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" aria-label="Navegação">
+            <a class="back" href="index.html" aria-label="Voltar à página inicial"><span aria-hidden="true">←</span> Voltar</a>
+        </nav>
+    </header>
+    <main class="container">
+        <p class="location">Iniciativa da Costa Verde Tech</p>
+        <h1>Totens Debian</h1>
+        <p class="intro">Queremos testar totens de autoatendimento baseados em Debian em comércios e pousadas da Costa Verde. A proposta é usar terminais dedicados com administração centralizada, adaptados à rotina de cada estabelecimento.</p>
+        <section class="partners" aria-labelledby="partners-title">
+            <h2 id="partners-title">Buscamos parceiros para o piloto</h2>
+            <p>Se você tem interesse em participar do piloto ou quer saber como os totens podem funcionar no seu estabelecimento, entre em contato com a gente.</p>
+            <a class="back contact" href="mailto:costaverdetech@gmail.com?subject=Totens%20Debian">Entre em contato</a>
+        </section>
+    </main>
+    <footer><p class="container">Costa Verde Tech</p></footer>
+</body>
+</html>
