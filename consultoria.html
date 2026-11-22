@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultoria da Costa Verde Tech em projetos de TI e telecom, infraestrutura, operações, dados e inteligência artificial.">
+    <title>Consultoria | Costa Verde Tech</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at top left, #074456, #001b2e 60%) fixed;
+            color: #edf8fb;
+            font: 1rem/1.65 Inter, system-ui, sans-serif;
+        }
+        .container { width: min(68rem, calc(100% - 2rem)); margin-inline: auto; }
+        header { border-bottom: 1px solid #245365; }
+        nav { display: flex; align-items: center; min-height: 4.5rem; }
+        .back {
+            display: inline-flex;
+            gap: .55rem;
+            align-items: center;
+            padding: .45rem .8rem;
+            border: 1px solid #35808c;
+            border-radius: .55rem;
+            color: #71ffff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .back:hover { background: #103b4b; }
+        .back:focus-visible { outline: 2px solid #71ffff; outline-offset: 4px; }
+        main { padding-block: clamp(3rem, 8vw, 7rem); }
+        .location { color: #98ff87; font-weight: 700; }
+        h1, h2, p { margin: 0; }
+        h1 { max-width: 14ch; margin-block: .7rem 1.25rem; font-size: clamp(2.5rem, 8vw, 5.25rem); line-height: 1.04; letter-spacing: -.045em; }
+        .intro { max-width: 57ch; font-size: clamp(1rem, 2.5vw, 1.22rem); }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1rem; margin-top: 2rem; }
+        .services section, .consultation { padding: 1.3rem; background: #0a2a3c; border: 1px solid #245365; border-radius: 1rem; }
+        .consultation { max-width: 44rem; margin-top: 2rem; }
+        .contact { margin-top: 1rem; }
+        h2 { margin-bottom: .5rem; color: #71ffff; font-size: 1.16rem; }
+        p { color: #c8dce4; }
+        footer { border-top: 1px solid #245365; padding-block: 1.25rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" aria-label="Navegação">
+            <a class="back" href="index.html" aria-label="Voltar à página inicial"><span aria-hidden="true">←</span> Voltar</a>
+        </nav>
+    </header>
+    <main class="container">
+        <p class="location">Tecnologia da informação e telecomunicações</p>
+        <h1>Consultoria</h1>
+        <p class="intro">A Costa Verde Tech ajuda empresas a avaliar necessidades, definir o escopo de projetos e planejar a implantação de soluções de tecnologia de acordo com a realidade da operação.</p>
+        <div class="services">
+            <section>
+                <h2>Projetos de TI e telecom</h2>
+                <p>Levantamento de requisitos e riscos, revisão de infraestrutura, redes e integrações, avaliação de soluções e apoio ao planejamento da implantação.</p>
+            </section>
+            <section>
+                <h2>Operações e segurança</h2>
+                <p>Estruturação do suporte técnico e do atendimento em campo, com apoio à continuidade dos serviços, ao controle de acessos e à transição para a operação.</p>
+            </section>
+            <section>
+                <h2>Dados e inteligência artificial</h2>
+                <p>Avaliação de oportunidades para usar painéis de indicadores, automação e assistentes de IA, considerando a qualidade e a privacidade dos dados, a revisão humana e a forma de medir os resultados.</p>
+            </section>
+        </div>
+        <section class="consultation" aria-labelledby="contact-title">
+            <h2 id="contact-title">Precisa de consultoria para sua empresa?</h2>
+            <p>Conte um pouco sobre seu projeto ou desafio. A conversa inicial ajuda a entender a necessidade e definir que tipo de apoio faz sentido.</p>
+            <a class="back contact" href="mailto:costaverdetech@gmail.com?subject=Consultoria">Entre em contato por e-mail</a>
+        </section>
+    </main>
+    <footer><p class="container">Costa Verde Tech</p></footer>
+</body>
+</html>
